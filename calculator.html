@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+     <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(black,purple);
+            background-size: 100% 520px;
+        }
+        #layout{
+            width: 450px;
+            height: 400px;
+            background-color: rgba(128,128,128,0.496);
+            position:relative;
+            top: 60px;
+            left: 35px;
+            border-radius: 0px 10px 10px 3px;
+            box-shadow: 5px 5px 10px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #a{
+            font-size: 160px;
+            position: absolute;
+            left: 120px;
+            color: gray;
+            top: 120px;
+            text-shadow: 2px 2px 10px black;
+        }
+        #a1{
+            font-size: 160px;
+            position: absolute;
+            right:150px;
+            top:120px;
+            color: white;
+            text-shadow: 2px 2px 10px black;
+        }
+        #display{
+            background-color: rgb(248,156,240);
+            width: 80%;
+            height: 30px;
+            font-size: 30px;
+            padding: 9px;
+            position: absolute;
+            left: 8%;
+            top: 10%;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            box-shadow: 5px 5px 10px black;
+
+        }
+        .b{
+            position: relative;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 40px;
+            margin-left:40px;
+            font-size: 30px;
+            font-weight: bolder;
+            color: rgba(240,156,240);
+            background-color: rgba(0,0,0,0.486);
+            border-radius: 5px;
+            transition: width 0.5s,height 0.5s,color 2s;
+            box-shadow: 2px 2px 5px black;
+        }
+        .b:hover{
+            width: 62px;
+            height: 42px;
+            color: rgb(0,0,0);
+            background-color: rgba(240,156,240);
+
+        }
+        #clr,#equ{
+            position: relative;
+            top: 20px;
+            width: 40%;
+            height:40px;
+            margin-left: 35px;
+            font-size: 30px;
+            color: rgb(248,156,240);
+            background-color: black;
+            border-radius: 5px;
+            transition: width 0.5s,height 0.5s,color 1s;
+            box-shadow: 2px 2px 5px black;
+        }
+        #clr:hover,#equ:hover{
+            width: 41%;
+            height: 40px;
+            color: rgb(0,0,0);
+            background-color: rgb(248,156,240);
+        }
+     </style>
+</head>
+<body>
+    <h1 id="a">Calc</h1>
+    <h1 id="a1">ulator</h1>
+    <div id="layout">
+        <form name="cform">
+            <input id="display" name="Answer">
+            <br><br>
+            <input class="b"  type="button" value="1" onclick="cform.Answer.value+='1'">
+            <input class="b" type="button" value="2" onclick="cform.Answer.value+='2'">
+            <input class="b" type="button" value="3" onclick="cform.Answer.value+='3'">
+            <input class="b" type="button" value="+" onclick="cform.Answer.value+='+'">
+            <br><br>
+            <input class="b" type="button" value="4"onclick="cform.Answer.value+='4'">
+            <input class="b" type="button" value="5" onclick="cform.Answer.value+='5'">
+            <input class="b" type="button" value="6" onclick="cform.Answer.value+='6'">
+            <input class="b" type="button" value="-" onclick="cform.Answer.value+='-'"">
+            <br><br>
+            <input class="b"type="button" value="7" onclick="cform.Answer.value+='7'">
+            <input class="b"type="button" value="8" onclick="cform.Answer.value+='8'">
+            <input class="b"type="button" value="9" onclick="cform.Answer.value+='9'">
+            <input class="b"type="button" value="X" onclick="cform.Answer.value+='*'">
+            <br><br>
+            <input  class="b"type="button" value="/" onclick="cform.Answer.value+='/'">
+            <input  class="b"type="button" value="0" onclick="cform.Answer.value+='0'">
+            <input  class="b"type="button" value="." onclick="cform.Answer.value+='.'">
+            <input  class="b"type="button" value="%" onclick="cform.Answer.value+='%'">
+            <br><br>
+            <input id="clr" type="button" value="clear" onclick="cform.Answer.value=''">
+            <input id="equ" type="button" value="=" onclick="cform.Answer.value=eval(cform.Answer.value)">
+            
+            <br><br>
+
+        </form>
+
+    </div>
+</body>
+</html>
